@@ -3,14 +3,16 @@
 #include <SPI.h>
 #define NUMPX 144
 #define MAXBRIGHT 255
-Adafruit_DotStar strip(NUMPX, DOTSTAR_BRG);
+#define CLK 27
+#define DAT 26
+
+Adafruit_DotStar strip(NUMPX, CLK, DAT, DOTSTAR_BRG);
 int set_brightness_percentage(float percent){
   return int(percent * MAXBRIGHT);
 }
 
 void setup() {
   // put your setup code here, to run once:
- 
   strip.begin();
   strip.show();
   strip.setBrightness(set_brightness_percentage(0.1));
@@ -24,5 +26,4 @@ void loop() {
     delay(10);
     strip.clear();
   }
-
 }
