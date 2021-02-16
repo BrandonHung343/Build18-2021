@@ -1,10 +1,9 @@
 #include <Adafruit_DotStar.h>
 #include <Adafruit_BNO055.h>
-#include <SPI.h>
 #define NUMPX 144
 #define MAXBRIGHT 255
-#define CLK 27
-#define DAT 26
+#define CLK 10
+#define DAT 11
 
 Adafruit_DotStar strip(NUMPX, CLK, DAT, DOTSTAR_BRG);
 int set_brightness_percentage(float percent){
@@ -23,6 +22,7 @@ void loop() {
   for(int i = 0; i < NUMPX; i++)
   {
     strip.setPixelColor(i, 255, 255, 255);
+    strip.show();
     delay(10);
     strip.clear();
   }
