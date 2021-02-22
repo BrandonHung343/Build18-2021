@@ -28,11 +28,11 @@
 */
 
 /* Set the delay between fresh samples */
-#define BNO055_SAMPLERATE_DELAY_MS (10)
+#define BNO055_SAMPLERATE_DELAY_MS (100)
 
 // Check I2C device address and correct line below (by default address is 0x29 or 0x28)
 //                                   id, address
-Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28);
+Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28, &Wire2);
 
 float xPos = 0;
 float yPos = 0;
@@ -145,6 +145,12 @@ void loop(void)
   Serial.println(yVel);
   Serial.print(F("zVel: "));
   Serial.println(zVel);
+  Serial.print(F("xAcc: "));
+  Serial.println(accel.x());
+  Serial.print(F("yAcc: "));
+  Serial.println(accel.y());
+  Serial.print(F("zAcc: "));
+  Serial.println(accel.z());
   
   delay(BNO055_SAMPLERATE_DELAY_MS);
 }
