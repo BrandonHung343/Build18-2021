@@ -1,0 +1,60 @@
+zVel: 0.00
+
+xPos: 0.00
+
+yPos: 0.00
+
+zPos: 0.00
+
+xVel: 0.00
+
+yVel: 0.00
+
+zVel: 0.00
+
+xPos: 0.00
+
+yPos: 0.00
+
+zPos: 0.00
+
+xVel: 0.00
+
+yVel: 0.00
+
+zVel: 0.00
+
+xPos: 0.00
+
+yPos: 0.00
+
+zPos: 0.00
+
+xVel: 0.00
+
+yVel: 0.00
+
+zVel: 0.00
+
+xPos: 0.00
+
+yPos: 0.00
+
+zPos: 0.00
+
+xVel: 0.00
+
+yVel: 0.00
+
+zVel: 0.00
+
+xPos: 0.00
+
+yPos: 0.00
+
+zPos: 0.00
+
+xVel: 0.00
+
+yVel: 0.00
+
