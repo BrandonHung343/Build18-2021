@@ -1,4 +1,14 @@
+xVel: 0.00
+
+yVel: 0.00
+
 zVel: 0.00
+
+xAcc: -1.06
+
+yAcc: 3.72
+
+zAcc: 3.69
 
 xPos: 0.00
 
@@ -12,17 +22,11 @@ yVel: 0.00
 
 zVel: 0.00
 
-xPos: 0.00
+xAcc: -3.71
 
-yPos: 0.00
+yAcc: 3.58
 
-zPos: 0.00
-
-xVel: 0.00
-
-yVel: 0.00
-
-zVel: 0.00
+zAcc: 1.48
 
 xPos: 0.00
 
@@ -36,25 +40,9 @@ yVel: 0.00
 
 zVel: 0.00
 
-xPos: 0.00
+xAcc: 4.26
 
-yPos: 0.00
+yAcc: -2.60
 
-zPos: 0.00
-
-xVel: 0.00
-
-yVel: 0.00
-
-zVel: 0.00
-
-xPos: 0.00
-
-yPos: 0.00
-
-zPos: 0.00
-
-xVel: 0.00
-
-yVel: 0.00
+zAcc: -1.89
 
