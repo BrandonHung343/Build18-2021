@@ -170,7 +170,7 @@ void loop() {
   // put your main code here, to run repeatedly:
   for(int i = cols-1; i >= 0; i--)
   {
-    for (int j = 0; j < rows; j++)
+    for (int j = rows-1; j >= 0; j--)
     {
       int index = i * rows + j;
       uint32_t px = pic[index];
@@ -178,7 +178,7 @@ void loop() {
       uint32_t green = (px >> 8) & 0x000000FF;
       uint32_t blue = px & 0x000000FF;
       
-      strip.setPixelColor(j, red, green, blue);
+      strip.setPixelColor(rows-j-1, red, green, blue);
       delay(1);
       // strip.clear();
     }
