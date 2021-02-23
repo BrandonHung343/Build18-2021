@@ -1,16 +1,4 @@
-xVel: 0.00
-
-yVel: 0.00
-
-zVel: 0.00
-
-xAcc: -1.06
-
-yAcc: 3.72
-
-zAcc: 3.69
-
-xPos: 0.00
+xPos before update: 0.00, xVel before update: 0.00xPos: 0.00
 
 yPos: 0.00
 
@@ -22,13 +10,13 @@ yVel: 0.00
 
 zVel: 0.00
 
-xAcc: -3.71
+xAcc: -0.05
 
-yAcc: 3.58
+yAcc: -0.09
 
-zAcc: 1.48
+zAcc: 0.04
 
-xPos: 0.00
+xPos before update: 0.00, xVel before update: 0.00xPos: 0.00
 
 yPos: 0.00
 
@@ -40,9 +28,27 @@ yVel: 0.00
 
 zVel: 0.00
 
-xAcc: 4.26
+xAcc: -0.05
 
-yAcc: -2.60
+yAcc: -0.10
 
-zAcc: -1.89
+zAcc: 0.06
+
+xPos before update: 0.00, xVel before update: 0.00xPos: 0.00
+
+yPos: 0.00
+
+zPos: 0.00
+
+xVel: 0.00
+
+yVel: 0.00
+
+zVel: 0.00
+
+xAcc: -0.06
+
+yAcc: -0.09
+
+zAcc: 0.05
 
