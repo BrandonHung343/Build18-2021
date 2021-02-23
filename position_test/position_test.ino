@@ -64,12 +64,11 @@ void calibrate_accel() {
 }
 
 double rk2_vel(double a, double h, double vi, double drift) {
-  return vi + (a - drift) * h;
+  return vi + (a - drift) * h / 2;
 }
 
-double rk2_pos(double a, double h, double vi, double xi, double drift){
-  double vint = vi + (a) * h / 2;
-  return xi + h * vint + (a - drift) / 4 * h * h;
+double rk2_pos(double a, double h, double vi, double xi, double drift, double dx, ){
+  return xi + (h * vi) / 2 + (a - drift) * h * h / 6;
 }
 
 void displaySensorDetails(void)
