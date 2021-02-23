@@ -31,7 +31,7 @@
 // Check I2C device address and correct line below (by default address is 0x29 or 0x28)
 //                                   id, address
 Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28, &Wire2);
-SimpleKalmanFilter kf(0, 0, 0.1);
+SimpleKalmanFilter kf(0, 0, 0.05);
 double xPos = 0.0;
 double yPos = 0.0;
 double zPos = 0.0;
@@ -67,11 +67,12 @@ void calibrate_accel() {
 }
 
 double rk2_vel(double a, double h, double vi, double drift) {
-  return vi + (a) * h / 2;
+  return vi + a * h / 2;
 }
 
 double rk2_pos(double a, double h, double vi, double xi, double drift){
-  return xi + (h * vi) / 2 + (a) * h * h / 6;
+  // return xi + (h * vi) / 2 + (a) * h * h / 6;
+  return xi + vi * h + a * h * h / 2
 }
 
 void displaySensorDetails(void)
