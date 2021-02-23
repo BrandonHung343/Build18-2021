@@ -24,7 +24,7 @@
 */
 
 /* Set the delay between fresh samples */
-#define BNO055_SAMPLERATE_DELAY_MS 10
+#define BNO055_SAMPLERATE_DELAY_MS 5
 #define DRIFT_CAL_CYCLES 500
 
 // Check I2C device address and correct line below (by default address is 0x29 or 0x28)
@@ -69,7 +69,7 @@ double rk2_vel(double a, double h, double vi, double drift) {
 
 double rk2_pos(double a, double h, double vi, double xi, double drift){
   double vint = vi + (a) * h / 2;
-  return xi + h * vint + (a - drift) / 2 * h * h;
+  return xi + h * vint + (a - drift) / 4 * h * h;
 }
 
 void displaySensorDetails(void)
@@ -147,14 +147,16 @@ void setup(void)
     delay(100);
   }
 
+  Serial.print("Internal cal done.\nCalibrating sensors in 3 sec...\n");
+  delay(3000);
   // Calibrate sensors
-//  calibrate_accel();
-//  Serial.print(F("xDrift: "));
-//  Serial.print(xDrift);
-//  Serial.print(F(", yDrift: "));
-//  Serial.print(yDrift);
-//  Serial.print(F(", zDrift: "));
-//  Serial.println(zDrift);
+  calibrate_accel();
+  Serial.print(F("xDrift: "));
+  Serial.print(xDrift);
+  Serial.print(F(", yDrift: "));
+  Serial.print(yDrift);
+  Serial.print(F(", zDrift: "));
+  Serial.println(zDrift);
   delay(1000);
   
 }
@@ -195,7 +197,9 @@ void loop(void)
 
 
   Serial.print(F("yPos: "));
-  Serial.print(yPos);
+  Serial.print(yPos, 5);
+  Serial.print(" yAccel: ");
+  Serial.print(ay, 5);
 
   Serial.println();
 
