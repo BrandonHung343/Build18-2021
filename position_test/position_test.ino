@@ -68,7 +68,7 @@ double rk2_vel(double a, double h, double vi, double drift) {
 }
 
 double rk2_pos(double a, double h, double vi, double xi, double drift){
-  double vint = vi + (a - drift) * h / 2;
+  double vint = vi + (a) * h / 2;
   return xi + h * vint + (a - drift) / 2 * h * h;
 }
 
@@ -81,6 +81,33 @@ void displaySensorDetails(void)
   Serial.println("------------------------------------");
   Serial.println("");
   delay(500);
+}
+
+void displayCalStatus(void)
+{
+  /* Get the four calibration values (0..3) */
+  /* Any sensor data reporting 0 should be ignored, */
+  /* 3 means 'fully calibrated" */
+  uint8_t system, gyro, accel, mag;
+  system = gyro = accel = mag = 0;
+  bno.getCalibration(&system, &gyro, &accel, &mag);
+ 
+  /* The data should be ignored until the system calibration is > 0 */
+  Serial.print("\t");
+  if (!system)
+  {
+    Serial.print("! ");
+  }
+ 
+  /* Display the individual values */
+  Serial.print("Sys:");
+  Serial.print(system, DEC);
+  Serial.print(" G:");
+  Serial.print(gyro, DEC);
+  Serial.print(" A:");
+  Serial.print(accel, DEC);
+  Serial.print(" M:");
+  Serial.println(mag, DEC);
 }
 
 /**************************************************************************/
@@ -110,14 +137,24 @@ void setup(void)
   /* Display some basic information on this sensor */
   displaySensorDetails();
 
+  uint8_t system, gyro, accel, mag;
+  system = gyro = accel = mag = 0;
+  bno.getCalibration(&system, &gyro, &accel, &mag);
+  
+  while(accel < 3){
+    displayCalStatus();
+    bno.getCalibration(&system, &gyro, &accel, &mag);
+    delay(100);
+  }
+
   // Calibrate sensors
-  calibrate_accel();
-  Serial.print(F("xDrift: "));
-  Serial.print(xDrift);
-  Serial.print(F(", yDrift: "));
-  Serial.print(yDrift);
-  Serial.print(F(", zDrift: "));
-  Serial.println(zDrift);
+//  calibrate_accel();
+//  Serial.print(F("xDrift: "));
+//  Serial.print(xDrift);
+//  Serial.print(F(", yDrift: "));
+//  Serial.print(yDrift);
+//  Serial.print(F(", zDrift: "));
+//  Serial.println(zDrift);
   delay(1000);
   
 }
@@ -159,9 +196,9 @@ void loop(void)
 
   Serial.print(F("yPos: "));
   Serial.print(yPos);
-;
+
   Serial.println();
-;
+
   
   delay(BNO055_SAMPLERATE_DELAY_MS);
 }
