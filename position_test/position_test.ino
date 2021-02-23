@@ -31,7 +31,7 @@
 // Check I2C device address and correct line below (by default address is 0x29 or 0x28)
 //                                   id, address
 Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28, &Wire2);
-SimpleKalmanFilter kf(0, 0, 0.01);
+SimpleKalmanFilter kf(0, 0, 0.1);
 double xPos = 0.0;
 double yPos = 0.0;
 double zPos = 0.0;
@@ -67,11 +67,11 @@ void calibrate_accel() {
 }
 
 double rk2_vel(double a, double h, double vi, double drift) {
-  return vi + (a - drift) * h / 2;
+  return vi + (a) * h / 2;
 }
 
 double rk2_pos(double a, double h, double vi, double xi, double drift){
-  return xi + (h * vi) / 2 + (a - drift) * h * h / 6;
+  return xi + (h * vi) / 2 + (a) * h * h / 6;
 }
 
 void displaySensorDetails(void)
@@ -143,11 +143,11 @@ void setup(void)
   system = gyro = accel = mag = 0;
   bno.getCalibration(&system, &gyro, &accel, &mag);
   
-  while(accel < 3){
-    displayCalStatus();
-    bno.getCalibration(&system, &gyro, &accel, &mag);
-    delay(100);
-  }
+//  while(accel < 3){
+//    displayCalStatus();
+//    bno.getCalibration(&system, &gyro, &accel, &mag);
+//    delay(100);
+//  }
 
   Serial.print("Internal cal done.\nCalibrating sensors in 2 sec...\n");
   delay(2000);
