@@ -1,698 +1,86 @@
-Integration Sensor Test
+yPos: 449.33329 yAccel: -0.01000
 
+yPos: 449.37117 yAccel: -0.01000
 
+yPos: 449.40906 yAccel: -0.01000
 
-------------------------------------
+yPos: 449.44694 yAccel: 0.00000
 
-------------------------------------
+yPos: 449.48483 yAccel: 0.00000
 
+yPos: 449.52272 yAccel: 0.00000
 
+yPos: 449.56062 yAccel: -0.02000
 
-	! Sys:0 G:3 A:0 M:0
+yPos: 449.59851 yAccel: -0.02000
 
-	! Sys:0 G:3 A:0 M:0
+yPos: 449.63641 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 449.67430 yAccel: -0.03000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 449.71220 yAccel: -0.03000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 449.75010 yAccel: -0.04000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 449.78800 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 449.82590 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 449.86381 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 449.90171 yAccel: -0.01000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 449.93962 yAccel: -0.01000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 449.97753 yAccel: -0.01000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.01544 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.05335 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.09127 yAccel: -0.04000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.12918 yAccel: -0.04000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.16710 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.20502 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.24294 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.28086 yAccel: -0.02000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.31878 yAccel: -0.03000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.35671 yAccel: -0.03000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.39463 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.43256 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.47049 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.50842 yAccel: -0.02000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.54635 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.58429 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.62222 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.66016 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:0
+yPos: 450.69810 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:1
+yPos: 450.73604 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:1
+yPos: 450.77399 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:1
+yPos: 450.81193 yAccel: 0.00000
 
-	! Sys:0 G:3 A:1 M:1
+yPos: 450.84988 yAccel: -0.02000
 
-	! Sys:0 G:3 A:1 M:1
+yPos: 450.88783 yAccel: -0.02000
 
-	! Sys:0 G:3 A:1 M:1
-
-	! Sys:0 G:3 A:1 M:1
-
-	! Sys:0 G:3 A:1 M:1
-
-	! Sys:0 G:3 A:1 M:1
-
-	! Sys:0 G:3 A:1 M:1
-
-	! Sys:0 G:3 A:1 M:1
-
-	! Sys:0 G:3 A:1 M:2
-
-	! Sys:0 G:3 A:1 M:2
-
-	! Sys:0 G:3 A:1 M:2
-
-	! Sys:0 G:3 A:1 M:2
-
-	! Sys:0 G:3 A:1 M:2
-
-	! Sys:0 G:3 A:1 M:2
-
-	! Sys:0 G:3 A:1 M:2
-
-	! Sys:0 G:3 A:1 M:2
-
-	! Sys:0 G:3 A:1 M:2
-
-	! Sys:0 G:3 A:1 M:2
-
-	Sys:2 G:3 A:1 M:2
-
-	Sys:2 G:3 A:1 M:2
-
-	Sys:2 G:3 A:1 M:2
-
-	Sys:2 G:3 A:1 M:2
-
-	Sys:1 G:3 A:1 M:2
-
-	Sys:1 G:3 A:1 M:2
-
-	! Sys:0 G:3 A:1 M:3
-
-	! Sys:0 G:3 A:1 M:3
-
-	! Sys:0 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:1 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:3 G:3 A:1 M:3
-
-	Sys:3 G:3 A:1 M:3
-
-	Sys:3 G:3 A:1 M:3
-
-	Sys:3 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	! Sys:0 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:1 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:2 G:3 A:0 M:3
-
-	Sys:3 G:3 A:0 M:3
-
-	Sys:3 G:3 A:0 M:3
-
-	Sys:3 G:3 A:0 M:3
-
-	Sys:3 G:3 A:0 M:3
-
-	Sys:3 G:3 A:0 M:3
-
-	Sys:3 G:3 A:0 M:3
-
-	Sys:3 G:3 A:0 M:3
-
-	Sys:3 G:3 A:0 M:3
-
-	Sys:3 G:3 A:0 M:3
-
-	Sys:3 G:3 A:0 M:3
-
-	Sys:3 G:3 A:0 M:3
-
-	Sys:3 G:3 A:0 M:3
-
-	Sys:3 G:3 A:0 M:3
-
-	Sys:3 G:3 A:0 M:3
-
-	Sys:3 G:3 A:1 M:3
-
-	Sys:3 G:3 A:1 M:3
-
-	Sys:3 G:3 A:1 M:3
-
-	Sys:3 G:3 A:1 M:3
-
-	Sys:3 G:3 A:1 M:3
-
-	Sys:3 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:1 M:3
-
-	Sys:2 G:3 A:3 M:3
-
-yPos: -0.00
-
-yPos: -0.00
-
-yPos: -0.00
-
-yPos: -0.00
-
-yPos: -0.00
-
-yPos: -0.00
-
-yPos: -0.00
-
-yPos: -0.00
-
-yPos: -0.00
-
-yPos: -0.00
-
-yPos: -0.00
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.01
-
-yPos: -0.02
-
-yPos: -0.02
-
-yPos: -0.02
-
-yPos: -0.02
-
-yPos: -0.02
-
-yPos: -0.02
-
-yPos: -0.02
-
-yPos: -0.02
-
-yPos: -0.03
-
-yPos: -0.03
-
-yPos: -0.03
-
-yPos: -0.03
-
-yPos: -0.03
-
-yPos: -0.03
-
-yPos: -0.04
-
-yPos: -0.04
-
-yPos: -0.04
-
-yPos: -0.04
-
-yPos: -0.04
-
-yPos: -0.05
-
-yPos: -0.05
-
-yPos: -0.05
-
-yPos: -0.05
-
-yPos: -0.05
-
-yPos: -0.06
-
-yPos: -0.06
-
-yPos: -0.06
-
-yPos: -0.06
-
-yPos: -0.06
-
-yPos: -0.07
-
-yPos: -0.07
-
-yPos: -0.07
-
-yPos: -0.07
-
-yPos: -0.07
-
-yPos: -0.07
-
-yPos: -0.08
-
-yPos: -0.08
-
-yPos: -0.08
-
-yPos: -0.08
-
-yPos: -0.08
-
-yPos: -0.08
-
-yPos: -0.08
-
-yPos: -0.09
-
-yPos: -0.09
-
-yPos: -0.09
-
-yPos: -0.09
-
-yPos: -0.09
-
-yPos: -0.09
-
-yPos: -0.09
-
-yPos: -0.09
-
-yPos: -0.09
-
-yPos: -0.09
+yPos: 450.92578 yAccel: -0.02000
 
