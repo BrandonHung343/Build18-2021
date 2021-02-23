@@ -148,9 +148,10 @@ void setup(void)
     delay(100);
   }
 
-  Serial.print("Internal cal done.\nCalibrating sensors in 3 sec...\n");
-  delay(3000);
+  Serial.print("Internal cal done.\nCalibrating sensors in 2 sec...\n");
+  delay(2000);
   // Calibrate sensors
+  Serial.println("Calibrating...");
   calibrate_accel();
   Serial.print(F("xDrift: "));
   Serial.print(xDrift);
@@ -188,7 +189,7 @@ void loop(void)
   double ay = accel.y();
   double az = accel.z();
 
-  ay = simpleKalmanFilter.updateEstimate(ay);
+  ay = kf.updateEstimate(ay);
 
   xPos = rk2_pos(ax, h, xVel, xPos, 0);
   yPos = rk2_pos(ay, h, yVel, yPos, yDrift);
