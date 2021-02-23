@@ -31,7 +31,7 @@
 // Check I2C device address and correct line below (by default address is 0x29 or 0x28)
 //                                   id, address
 Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28, &Wire2);
-SimpleKalmanFilter kf;
+SimpleKalmanFilter kf(0, 0, 0.01);
 double xPos = 0.0;
 double yPos = 0.0;
 double zPos = 0.0;
@@ -62,7 +62,8 @@ void calibrate_accel() {
   xDrift = xDrift / i;
   yDrift = yDrift / i;
   zDrift = zDrift / i;
-  kf = simpleKalmanFilter(yDrift, yDrift, h);
+  kf.setMeasurementError(yDrift);
+  kf.setEstimateError(yDrift);
 }
 
 double rk2_vel(double a, double h, double vi, double drift) {
@@ -184,11 +185,13 @@ void loop(void)
   */
 
   /* The processing sketch expects data as roll, pitch, heading */
+  
+  
   double ax = accel.x();
   double ay = accel.y();
   double az = accel.z();
 
-  ay = simpleKalmanFilter.updateEstimate(ay);
+  ay = kf.updateEstimate(ay);
 
   xPos = rk2_pos(ax, h, xVel, xPos, 0);
   yPos = rk2_pos(ay, h, yVel, yPos, yDrift);
