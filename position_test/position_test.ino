@@ -1,3 +1,4 @@
+#include <SimpleKalmanFilter.h>
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BNO055.h>
@@ -30,7 +31,7 @@
 // Check I2C device address and correct line below (by default address is 0x29 or 0x28)
 //                                   id, address
 Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28, &Wire2);
-
+SimpleKalmanFilter kf;
 double xPos = 0.0;
 double yPos = 0.0;
 double zPos = 0.0;
@@ -61,13 +62,14 @@ void calibrate_accel() {
   xDrift = xDrift / i;
   yDrift = yDrift / i;
   zDrift = zDrift / i;
+  kf = simpleKalmanFilter(yDrift, yDrift, h);
 }
 
 double rk2_vel(double a, double h, double vi, double drift) {
   return vi + (a - drift) * h / 2;
 }
 
-double rk2_pos(double a, double h, double vi, double xi, double drift, double dx, ){
+double rk2_pos(double a, double h, double vi, double xi, double drift){
   return xi + (h * vi) / 2 + (a - drift) * h * h / 6;
 }
 
@@ -185,6 +187,8 @@ void loop(void)
   double ax = accel.x();
   double ay = accel.y();
   double az = accel.z();
+
+  ay = simpleKalmanFilter.updateEstimate(ay);
 
   xPos = rk2_pos(ax, h, xVel, xPos, 0);
   yPos = rk2_pos(ay, h, yVel, yPos, yDrift);
