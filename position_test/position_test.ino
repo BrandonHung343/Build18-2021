@@ -68,7 +68,8 @@ double rk2_vel(double a, double h, double vi, double drift) {
 }
 
 double rk2_pos(double a, double h, double vi, double xi, double drift){
-  return xi + h * vi + (a - drift) / 2 * h * h;
+  double vint = vi + (a - drift) * h / 2;
+  return xi + h * vint + (a - drift) / 2 * h * h;
 }
 
 void displaySensorDetails(void)
