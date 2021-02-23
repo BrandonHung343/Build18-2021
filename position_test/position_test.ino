@@ -5,30 +5,26 @@
 
 /* This driver uses the Adafruit unified sensor library (Adafruit_Sensor),
    which provides a common 'type' for sensor data and some helper functions.
-
    To use this driver you will also need to download the Adafruit_Sensor
    library and include it in your libraries folder.
-
    You should also assign a unique ID to this sensor for use with
    the Adafruit Sensor API so that you can identify this particular
    sensor in any data logs, etc.  To assign a unique ID, simply
    provide an appropriate value in the constructor below (12345
    is used by default in this example).
-
    Connections
    ===========
    Connect SCL to analog 5
    Connect SDA to analog 4
    Connect VDD to 3.3-5V DC
    Connect GROUND to common ground
-
    History
    =======
    2015/MAR/03  - First release (KTOWN)
 */
 
 /* Set the delay between fresh samples */
-#define BNO055_SAMPLERATE_DELAY_MS 100
+#define BNO055_SAMPLERATE_DELAY_MS 10
 
 // Check I2C device address and correct line below (by default address is 0x29 or 0x28)
 //                                   id, address
@@ -40,7 +36,7 @@ double zPos = 0.0;
 double xVel = 0.0;
 double yVel = 0.0;
 double zVel = 0.0;
-double h = BNO055_SAMPLERATE_DELAY_MS / 1000;
+double h = double(BNO055_SAMPLERATE_DELAY_MS) / 1000;
 
 /**************************************************************************/
 /*
@@ -61,12 +57,7 @@ void displaySensorDetails(void)
   sensor_t sensor;
   bno.getSensor(&sensor);
   Serial.println("------------------------------------");
-  Serial.print  ("Sensor:       "); Serial.println(sensor.name);
-  Serial.print  ("Driver Ver:   "); Serial.println(sensor.version);
-  Serial.print  ("Unique ID:    "); Serial.println(sensor.sensor_id);
-  Serial.print  ("Max Value:    "); Serial.print(sensor.max_value); Serial.println(" xxx");
-  Serial.print  ("Min Value:    "); Serial.print(sensor.min_value); Serial.println(" xxx");
-  Serial.print  ("Resolution:   "); Serial.print(sensor.resolution); Serial.println(" xxx");
+
   Serial.println("------------------------------------");
   Serial.println("");
   delay(500);
@@ -89,8 +80,7 @@ void setup(void)
     Serial.print("Ooops, no BNO055 detected ... Check your wiring or I2C ADDR!");
     while(1);
   }
-  Serial.print(F("Value of h is "));
-  Serial.println(h);
+
    
   delay(1000);
 
@@ -126,10 +116,7 @@ void loop(void)
   double ax = accel.x();
   double ay = accel.y();
   double az = accel.z();
-  Serial.print(F("xPos before update: "));
-  Serial.print(xPos);
-  Serial.print(F(", xVel before update: "));
-  Serial.print(xVel);
+
   xPos = rk2_pos(ax, h, xVel, xPos);
   yPos = rk2_pos(ay, h, yVel, yPos);
   zPos = rk2_pos(az, h, zVel, zPos);
@@ -139,23 +126,15 @@ void loop(void)
   zVel = rk2_vel(az, h, zVel);
 
   Serial.print(F("xPos: "));
-  Serial.println(xPos);
+  Serial.print(xPos);
+  Serial.print(" ");
   Serial.print(F("yPos: "));
-  Serial.println(yPos);
+  Serial.print(yPos);
+  Serial.print(" ");
   Serial.print(F("zPos: "));
-  Serial.println(zPos);
-  Serial.print(F("xVel: "));
-  Serial.println(xVel);
-  Serial.print(F("yVel: "));
-  Serial.println(yVel);
-  Serial.print(F("zVel: "));
-  Serial.println(zVel);
-  Serial.print(F("xAcc: "));
-  Serial.println(ax);
-  Serial.print(F("yAcc: "));
-  Serial.println(ay);
-  Serial.print(F("zAcc: "));
-  Serial.println(az);
+  Serial.print(zPos);
+  Serial.println();
+;
   
   delay(BNO055_SAMPLERATE_DELAY_MS);
 }
