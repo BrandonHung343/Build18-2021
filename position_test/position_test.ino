@@ -25,10 +25,11 @@
 
 /* Set the delay between fresh samples */
 #define BNO055_SAMPLERATE_DELAY_MS 10
+#define DRIFT_CAL_CYCLES 5000
 
 // Check I2C device address and correct line below (by default address is 0x29 or 0x28)
 //                                   id, address
-Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28, &Wire2);
+Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28);//, &Wire2);
 
 double xPos = 0.0;
 double yPos = 0.0;
@@ -36,7 +37,10 @@ double zPos = 0.0;
 double xVel = 0.0;
 double yVel = 0.0;
 double zVel = 0.0;
-double h = double(BNO055_SAMPLERATE_DELAY_MS) / 1000;
+double xDrift = 0.0;
+double yDrift = 0.0;
+double zDrift = 0.0;
+double h = double(BNO055_SAMPLERATE_DELAY_MS) / 1000.0;
 
 /**************************************************************************/
 /*
@@ -44,12 +48,27 @@ double h = double(BNO055_SAMPLERATE_DELAY_MS) / 1000;
     sensor API sensor_t type (see Adafruit_Sensor for more information)
 */
 /**************************************************************************/
-double rk2_vel(double a, double h, double vi) {
-  return vi + a * h;
+void calibrate_accel() {
+  int i = 0;
+  while(i < DRIFT_CAL_CYCLES){
+     imu::Vector<3> accel = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+     xDrift = xDrift + accel.x();
+     yDrift = yDrift + accel.y();
+     zDrift = zDrift + accel.z();
+     i++;
+     delay(BNO055_SAMPLERATE_DELAY_MS);
+  }
+  xDrift = xDrift / i;
+  yDrift = yDrift / i;
+  zDrift = zDrift / i;
 }
 
-double rk2_pos(double a, double h, double vi, double xi){
-  return xi + h * vi + a / 2 * h * h;
+double rk2_vel(double a, double h, double vi, double drift) {
+  return vi + (a - drift) * h;
+}
+
+double rk2_pos(double a, double h, double vi, double xi, double drift){
+  return xi + h * vi + (a - drift) / 2 * h * h;
 }
 
 void displaySensorDetails(void)
@@ -89,6 +108,17 @@ void setup(void)
    
   /* Display some basic information on this sensor */
   displaySensorDetails();
+
+  // Calibrate sensors
+  calibrate_accel();
+  Serial.print(F("xDrift: "));
+  Serial.print(xDrift);
+  Serial.print(F(", yDrift: "));
+  Serial.print(yDrift);
+  Serial.print(F(", zDrift: "));
+  Serial.println(zDrift);
+  delay(1000);
+  
 }
 
 /**************************************************************************/
@@ -117,13 +147,13 @@ void loop(void)
   double ay = accel.y();
   double az = accel.z();
 
-  xPos = rk2_pos(ax, h, xVel, xPos);
-  yPos = rk2_pos(ay, h, yVel, yPos);
-  zPos = rk2_pos(az, h, zVel, zPos);
+  xPos = rk2_pos(ax, h, xVel, xPos, xDrift);
+  yPos = rk2_pos(ay, h, yVel, yPos, yDrift);
+  zPos = rk2_pos(az, h, zVel, zPos, zDrift);
   
-  xVel = rk2_vel(ax, h, xVel);
-  yVel = rk2_vel(ay, h, yVel);
-  zVel = rk2_vel(az, h, zVel);
+  xVel = rk2_vel(ax, h, xVel, xDrift);
+  yVel = rk2_vel(ay, h, yVel, yDrift);
+  zVel = rk2_vel(az, h, zVel, zDrift);
 
   Serial.print(F("xPos: "));
   Serial.print(xPos);
