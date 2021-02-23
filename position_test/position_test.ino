@@ -28,19 +28,19 @@
 */
 
 /* Set the delay between fresh samples */
-#define BNO055_SAMPLERATE_DELAY_MS (100)
+#define BNO055_SAMPLERATE_DELAY_MS 100
 
 // Check I2C device address and correct line below (by default address is 0x29 or 0x28)
 //                                   id, address
 Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28, &Wire2);
 
-float xPos = 0;
-float yPos = 0;
-float zPos = 0;
-float xVel = 0;
-float yVel = 0;
-float zVel = 0;
-float h = BNO055_SAMPLERATE_DELAY_MS / 1000;
+double xPos = 0.0;
+double yPos = 0.0;
+double zPos = 0.0;
+double xVel = 0.0;
+double yVel = 0.0;
+double zVel = 0.0;
+double h = BNO055_SAMPLERATE_DELAY_MS / 1000;
 
 /**************************************************************************/
 /*
@@ -48,11 +48,11 @@ float h = BNO055_SAMPLERATE_DELAY_MS / 1000;
     sensor API sensor_t type (see Adafruit_Sensor for more information)
 */
 /**************************************************************************/
-float rk2_vel(float a, float h, float vi) {
+double rk2_vel(double a, double h, double vi) {
   return vi + a * h;
 }
 
-float rk2_pos(float a, float h, float vi, float xi){
+double rk2_pos(double a, double h, double vi, double xi){
   return xi + h * vi + a / 2 * h * h;
 }
 
@@ -89,6 +89,8 @@ void setup(void)
     Serial.print("Ooops, no BNO055 detected ... Check your wiring or I2C ADDR!");
     while(1);
   }
+  Serial.print(F("Value of h is "));
+  Serial.println(h);
    
   delay(1000);
 
@@ -121,10 +123,13 @@ void loop(void)
   */
 
   /* The processing sketch expects data as roll, pitch, heading */
-  float ax = (float)accel.x();
-  float ay = (float)accel.y();
-  float az = (float)accel.z();
-
+  double ax = accel.x();
+  double ay = accel.y();
+  double az = accel.z();
+  Serial.print(F("xPos before update: "));
+  Serial.print(xPos);
+  Serial.print(F(", xVel before update: "));
+  Serial.print(xVel);
   xPos = rk2_pos(ax, h, xVel, xPos);
   yPos = rk2_pos(ay, h, yVel, yPos);
   zPos = rk2_pos(az, h, zVel, zPos);
@@ -146,11 +151,11 @@ void loop(void)
   Serial.print(F("zVel: "));
   Serial.println(zVel);
   Serial.print(F("xAcc: "));
-  Serial.println(accel.x());
+  Serial.println(ax);
   Serial.print(F("yAcc: "));
-  Serial.println(accel.y());
+  Serial.println(ay);
   Serial.print(F("zAcc: "));
-  Serial.println(accel.z());
+  Serial.println(az);
   
   delay(BNO055_SAMPLERATE_DELAY_MS);
 }
