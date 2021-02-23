@@ -25,11 +25,11 @@
 
 /* Set the delay between fresh samples */
 #define BNO055_SAMPLERATE_DELAY_MS 10
-#define DRIFT_CAL_CYCLES 5000
+#define DRIFT_CAL_CYCLES 500
 
 // Check I2C device address and correct line below (by default address is 0x29 or 0x28)
 //                                   id, address
-Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28);//, &Wire2);
+Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28, &Wire2);
 
 double xPos = 0.0;
 double yPos = 0.0;
@@ -148,22 +148,18 @@ void loop(void)
   double ay = accel.y();
   double az = accel.z();
 
-  xPos = rk2_pos(ax, h, xVel, xPos, xDrift);
+  xPos = rk2_pos(ax, h, xVel, xPos, 0);
   yPos = rk2_pos(ay, h, yVel, yPos, yDrift);
-  zPos = rk2_pos(az, h, zVel, zPos, zDrift);
+  zPos = rk2_pos(az, h, zVel, zPos, 0);
   
-  xVel = rk2_vel(ax, h, xVel, xDrift);
+  xVel = rk2_vel(ax, h, xVel, 0);
   yVel = rk2_vel(ay, h, yVel, yDrift);
-  zVel = rk2_vel(az, h, zVel, zDrift);
+  zVel = rk2_vel(az, h, zVel, 0);
 
-  Serial.print(F("xPos: "));
-  Serial.print(xPos);
-  Serial.print(" ");
+
   Serial.print(F("yPos: "));
   Serial.print(yPos);
-  Serial.print(" ");
-  Serial.print(F("zPos: "));
-  Serial.print(zPos);
+;
   Serial.println();
 ;
   
