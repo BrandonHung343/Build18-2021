@@ -3,12 +3,18 @@
 #include <Adafruit_BNO055.h>
 #include <SPI.h>         // COMMENT OUT THIS LINE FOR GEMMA OR TRINKET
 //#include <SD.h>
+#include <Wire.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_BNO055.h>
+#include <utility/imumaths.h>
 
 #define NUMPX 144
 #define MAXBRIGHT 255
 #define DATAPIN    26
 #define CLOCKPIN   27
 
+#define BNO055_SAMPLERATE_DELAY_MS 100
+#define A_THRESH 1.0
 //#define SDMOSI 11
 //#define SDCS 10
 //#define SDCLK 13
@@ -275,7 +281,9 @@ const unsigned long pic [] PROGMEM = {
 //File myFile;
 
 Adafruit_DotStar strip(NUMPX, DATAPIN, CLOCKPIN, DOTSTAR_BGR);
+Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28, &Wire2);
 uint32_t cols = sizeof(pic) / sizeof(pic[0]) / rows;
+
 int set_brightness_percentage(float percent){
   return round(percent * MAXBRIGHT);
 }
@@ -304,25 +312,46 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  for(int i = cols-1; i >= 0; i--)
+  imu::Vector<3> accel = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+  double a = accel.y();
+  int i;
+  int eCond;
+  int inc;
+  if (abs(a) > A_THRESH)
   {
-    for (int j = rows-1; j >= 0; j--)
+    if (a < 0)
     {
-      int index = i * rows + j;
-      uint32_t px = pic[index];
-      uint32_t red = (px >> 16) & 0x000000FF;
-      uint32_t green = (px >> 8) & 0x000000FF;
-      uint32_t blue = px & 0x000000FF;
-      
-      strip.setPixelColor(rows - j - 1, red, green, blue);
-      
-      // strip.clear();
+      i = cols - 1;
+      eCond = -1;
+      inc = -1;
     }
+    else
+    {
+      i = 0;
+      eCond = cols;
+      inc = 1;
+    }
+    while(i != eCond)
+    {
+      for (int j = rows-1; j >= 0; j--)
+      {
+        int index = i * rows + j;
+        uint32_t px = pic[index];
+        uint32_t red = (px >> 16) & 0x000000FF;
+        uint32_t green = (px >> 8) & 0x000000FF;
+        uint32_t blue = px & 0x000000FF;
+        
+        strip.setPixelColor(rows - j - 1, red, green, blue);
+        
+        // strip.clear();
+      }
+      strip.show();
+      i = i + inc;
+      delay(5);   
+    }
+    strip.clear();
     strip.show();
-    delay(5);
-    
   }
-  strip.clear();
-  strip.show();
-  //delay(50);
+  Serial.println("Acceleration limit not met!");
+  delay(BNO055_SAMPLERATE_DELAY_MS);
 }
