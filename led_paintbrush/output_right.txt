@@ -1,0 +1,473 @@
+Acceleration limit not met!
+
+-1.40
+
+Acceleration limit not met!
+
+-3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+h: nan a: -3.68
+
+Acceleration limit not met!
+
+0.59
+
+Acceleration limit not met!
